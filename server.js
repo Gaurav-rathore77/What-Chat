@@ -13,7 +13,7 @@ const io = new Server(server);
 const PORT = process.env.PORT || 8000;
 
 // Middleware for static files
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'docs')));
 mongoose.connect(process.env.MONGODB_URL).then(() => {
   console.log('Connected to MongoDB');
 }).catch((error) => {
